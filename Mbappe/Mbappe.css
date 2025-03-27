@@ -1,0 +1,77 @@
+body {
+    background-image: url('Фон.jpg'); /*Устанавливает фоновое изображение.*/
+    background-size: cover; /*Растягивает изображение, чтобы оно покрывало весь фон.*/
+    background-position: center; /*Центрирует изображение.*/
+    background-attachment: fixed; /* Фиксирует фон при прокрутке.*/
+    margin: 0; /*Убирает отступы.*/
+    padding: 0; /*Убирает отступы.*/
+}
+header, .caption, .history {
+    width: 100%; /* Ширина текстового блока */
+    max-width: 1200px;
+    margin-left: 20px; /* Отступ слева */
+}
+
+.history {
+    font-size: 200%;
+    background: #d4be66;
+    padding: 20px;
+    margin-bottom: 20px; /* Отступ между блоками */
+}
+
+.caption {
+    font-size: 200%;
+    background: #d4be66;
+    padding: 20px;
+    text-align: center; /* Текст в центре */
+}
+
+#foto {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+    margin-right: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+#foto {
+    background-color: gray; /* Фоновое изображение */
+    background-size: cover; /* Растянуть фон на весь блок */
+    background-position: center; /* Центрировать фон */
+    padding: 20px; /* Отступы внутри блока */
+    border-radius: 30px; /* Закругленные углы */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень для блока */
+}
+
+#foto img {
+    width: 500px;
+    max-width: 100%; /* Адаптивные изображения */
+    height: auto;
+    margin-bottom: 10px; /* Отступ между картинками */
+}
+.button {
+    height: 200px;
+    width: auto;
+    max-width: 1200px;
+    margin-bottom: 10px; /* Отступ между картинками */
+    left: 0;
+    margin-left: 20px;
+    display: flex;
+    gap: 40px;
+}
+.end {
+    display: block;
+    width: 1850px;
+    height: auto;
+    max-width: 1850px;
+    left: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 200%;
+    background: #d4be66;
+    text-align: center; /* Текст в центре */
+    color: blue; /* или другой цвет по умолчанию */
+    text-decoration: none;
+}

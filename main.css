@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');/*Позволяет подключить внешние стили или шрифты. В данном случае мы подключаем шрифт Rubik Mono One с Google Fonts.*/
+
+body {
+    background-image: url('Foto/Фон.jpg'); /*Устанавливает фоновое изображение.*/
+    background-size: cover; /*Растягивает изображение, чтобы оно покрывало весь фон.*/
+    background-position: center; /*Центрирует изображение.*/
+    background-attachment: fixed; /* Фиксирует фон при прокрутке.*/
+    margin: 0; /*Убирает отступы.*/
+    padding: 0; /*Убирает отступы.*/
+    font-family: "Rubik Mono One", monospace; /*Устанавливает шрифт для текста.*/
+}
+.link {
+    display: block; /* или inline-block */
+    font-weight: 400; /*Устанавливает толщину шрифта.*/
+    font-style: normal; /*Устанавливает стиль шрифта.*/
+    background: #d4be66; /*Устанавливает цвет текста.*/
+    text-align: center; /*Центрирует текст.*/
+    padding: 20px; /*Добавляет внутренние отступы.*/
+    font-size: 110%; /*Устанавливает размер шрифта.*/
+    border: 10px solid black; /*Добавляет рамку.*/
+    cursor: pointer; /*Меняет курсор на указатель.*/
+    width: 100%; /* Ширина блоков */
+    max-width: 700px; /* Максимальная ширина */
+    margin: 0; /* Убираем внешние отступы */
+}
+
+.text-block {
+    width: 200px;
+    background: #f0f0f0;
+}
+.container {
+    display: flex; /*Включает Flexbox для контейнера.*/
+    justify-content: space-between; /*Распределяет элементы по ширине контейнера.*/
+    align-items: flex-start; /*Выравнивает элементы по верхнему краю.*/
+    padding: 20px; /*Добавляет внутренние отступы.*/
+    gap: 20px; /* Отступ между картинками и контентом */
+}
+
+#Mbappe, #Bellingham {
+    position: fixed; /*Фиксирует картинки на экране.*/
+    top: 0;/* Прижимает картинки к верхнему краю.*/
+    width: auto;/*Автоматическая ширина.*/
+    max-width: 25%; /*Ограничивает максимальную ширину.*/
+    z-index: 1; /*Устанавливает порядок слоев.*/
+    border: 10px solid black; /*Добавляет рамку.*/
+    cursor: pointer; /*Меняет курсор на указатель.*/
+}
+#Mbappe:hover, #Bellingham:hover {
+    outline: dotted white; /*Добавляет контур при наведении.*/
+}
+#Bellingham {
+    right: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+#Mbappe {
+    left: 0;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.content {
+    flex-grow: 1; /*Растягивает элемент, чтобы заполнить доступное пространство.*/
+    display: flex;
+    flex-direction: column; /*Располагает элементы вертикально.*/
+    align-items: center; /*Центрирует элементы по горизонтали.*/
+    gap: 20px; /* Отступ между блоками */
+}
+.link:hover {
+    outline: dotted white;
+}
