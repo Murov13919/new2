@@ -1,71 +1,159 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');/*Позволяет подключить внешние стили или шрифты. В данном случае мы подключаем шрифт Rubik Mono One с Google Fonts.*/
+/* Импорт шрифта Rubik Mono One с Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 
+/* Основные стили для body */
 body {
-    background-image: url('Foto/Фон.jpg'); /*Устанавливает фоновое изображение.*/
-    background-size: cover; /*Растягивает изображение, чтобы оно покрывало весь фон.*/
-    background-position: center; /*Центрирует изображение.*/
-    background-attachment: fixed; /* Фиксирует фон при прокрутке.*/
-    margin: 0; /*Убирает отступы.*/
-    padding: 0; /*Убирает отступы.*/
-    font-family: "Rubik Mono One", monospace; /*Устанавливает шрифт для текста.*/
+    background-image: url('Foto/Фон.jpg'); /* Фоновое изображение */
+    background-size: cover; /* Растягиваем изображение на весь экран */
+    background-position: center; /* Центрируем фон */
+    background-attachment: fixed; /* Фиксируем фон при скролле */
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    font-family: "Rubik Mono One", monospace; /* Устанавливаем основной шрифт */
 }
+
+/* Стили для ссылок-кнопок */
 .link {
-    display: block; /* или inline-block */
-    font-weight: 400; /*Устанавливает толщину шрифта.*/
-    font-style: normal; /*Устанавливает стиль шрифта.*/
-    background: #d4be66; /*Устанавливает цвет текста.*/
-    text-align: center; /*Центрирует текст.*/
-    padding: 20px; /*Добавляет внутренние отступы.*/
-    font-size: 110%; /*Устанавливает размер шрифта.*/
-    border: 10px solid black; /*Добавляет рамку.*/
-    cursor: pointer; /*Меняет курсор на указатель.*/
-    width: 100%; /* Ширина блоков */
-    max-width: 700px; /* Максимальная ширина */
+    display: block; /* Делаем блочными для полной ширины */
+    font-weight: 400; /* Нормальная толщина шрифта */
+    font-style: normal; /* Обычный стиль шрифта (не курсив) */
+    background: #d4be66; /* Желтый фон кнопок */
+    text-align: center; /* Выравниваем текст по центру */
+    padding: 20px; /* Внутренние отступы */
+    font-size: 110%; /* Размер шрифта */
+    border: 10px solid black; /* Толстая черная рамка */
+    cursor: pointer; /* Курсор-указатель при наведении */
+    width: 100%; /* Занимает всю доступную ширину */
+    max-width: 700px; /* Но не более 700px */
     margin: 0; /* Убираем внешние отступы */
 }
 
-.text-block {
-    width: 200px;
-    background: #f0f0f0;
-}
-.container {
-    display: flex; /*Включает Flexbox для контейнера.*/
-    justify-content: space-between; /*Распределяет элементы по ширине контейнера.*/
-    align-items: flex-start; /*Выравнивает элементы по верхнему краю.*/
-    padding: 20px; /*Добавляет внутренние отступы.*/
-    gap: 20px; /* Отступ между картинками и контентом */
-}
-
-#Mbappe, #Bellingham {
-    position: fixed; /*Фиксирует картинки на экране.*/
-    top: 0;/* Прижимает картинки к верхнему краю.*/
-    width: auto;/*Автоматическая ширина.*/
-    max-width: 25%; /*Ограничивает максимальную ширину.*/
-    z-index: 1; /*Устанавливает порядок слоев.*/
-    border: 10px solid black; /*Добавляет рамку.*/
-    cursor: pointer; /*Меняет курсор на указатель.*/
-}
-#Mbappe:hover, #Bellingham:hover {
-    outline: dotted white; /*Добавляет контур при наведении.*/
-}
-#Bellingham {
-    right: 0;
-    margin-top: 20px;
-    margin-right: 20px;
-}
-#Mbappe {
-    left: 0;
-    margin-top: 20px;
-    margin-left: 40px;
-}
-
-.content {
-    flex-grow: 1; /*Растягивает элемент, чтобы заполнить доступное пространство.*/
-    display: flex;
-    flex-direction: column; /*Располагает элементы вертикально.*/
-    align-items: center; /*Центрирует элементы по горизонтали.*/
-    gap: 20px; /* Отступ между блоками */
-}
+/* Эффект при наведении на кнопки */
 .link:hover {
-    outline: dotted white;
+    outline: dotted white; /* Белая пунктирная рамка */
+}
+
+/* Основной контейнер */
+.container {
+    display: flex; /* Включаем flex-расположение */
+    justify-content: space-between; /* Распределяем пространство между элементами */
+    align-items: flex-start; /* Выравниваем по верхнему краю */
+    padding: 20px; /* Внутренние отступы */
+    gap: 20px; /* Расстояние между элементами */
+}
+
+/* Общие стили для изображений игроков */
+#Mbappe, #Bellingham {
+    position: fixed; /* Фиксированное позиционирование */
+    top: 0; /* Прижимаем к верхнему краю */
+    width: auto; /* Автоматическая ширина */
+    max-width: 25%; /* Максимум 25% ширины экрана */
+    z-index: 1; /* Слой выше основного контента */
+    border: 10px solid black; /* Черная рамка */
+    cursor: pointer; /* Курсор-указатель */
+}
+
+/* Эффект при наведении на изображения */
+#Mbappe:hover, #Bellingham:hover {
+    outline: dotted white; /* Белая пунктирная рамка */
+}
+
+/* Специфичные стили для Беллингема (справа) */
+#Bellingham {
+    right: 0; /* Прижимаем к правому краю */
+    margin-top: 20px; /* Отступ сверху */
+    margin-right: 20px; /* Отступ справа */
+}
+
+/* Специфичные стили для Мбаппе (слева) */
+#Mbappe {
+    left: 0; /* Прижимаем к левому краю */
+    margin-top: 20px; /* Отступ сверху */
+    margin-left: 40px; /* Отступ слева */
+}
+
+/* Стили для центрального блока с кнопками */
+.content {
+    flex-grow: 1; /* Занимает все доступное пространство */
+    display: flex; /* Включаем flex-расположение */
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: center; /* Центрируем по горизонтали */
+    gap: 20px; /* Расстояние между элементами */
+}
+
+/* ========== АДАПТИВНЫЕ СТИЛИ ========== */
+
+/* Для экранов до 1200px (ноутбуки) */
+@media (max-width: 1200px) {
+    #Mbappe, #Bellingham {
+        max-width: 20%; /* Уменьшаем максимальную ширину изображений */
+    }
+}
+
+/* Для экранов до 992px (планшеты) */
+@media (max-width: 992px) {
+    #Mbappe, #Bellingham {
+        position: relative; /* Меняем на относительное позиционирование */
+        max-width: 30%; /* Увеличиваем ширину (так как теперь в потоке) */
+        margin: 20px auto; /* Центрируем с отступами */
+        display: block; /* Блочное отображение */
+    }
+    
+    /* Специфичные стили для Мбаппе */
+    #Mbappe {
+        left: auto; /* Сбрасываем фиксированное позиционирование */
+        margin-left: auto; /* Автоматический отступ слева */
+    }
+    
+    /* Специфичные стили для Беллингема */
+    #Bellingham {
+        right: auto; /* Сбрасываем фиксированное позиционирование */
+        margin-right: auto; /* Автоматический отступ справа */
+    }
+    
+    /* Меняем расположение контейнера */
+    .container {
+        flex-direction: column; /* Вертикальное расположение */
+        align-items: center; /* Центрируем элементы */
+    }
+}
+
+/* Для экранов до 768px (большие смартфоны) */
+@media (max-width: 768px) {
+    #Mbappe, #Bellingham {
+        max-width: 50%; /* Увеличиваем ширину изображений */
+        height: auto; /* Автоматическая высота */
+    }
+    
+    /* Настройки кнопок */
+    .link {
+        padding: 15px; /* Уменьшаем отступы */
+        font-size: 100%; /* Немного уменьшаем шрифт */
+        border: 8px solid black; /* Уменьшаем толщину рамки */
+    }
+}
+
+/* Для экранов до 576px (маленькие смартфоны) */
+@media (max-width: 576px) {
+    #Mbappe, #Bellingham {
+        max-width: 70%; /* Еще увеличиваем ширину изображений */
+    }
+    
+    /* Дополнительные настройки кнопок */
+    .link {
+        padding: 10px; /* Минимальные отступы */
+        font-size: 90%; /* Уменьшенный шрифт */
+        border: 5px solid black; /* Тонкая рамка */
+    }
+    
+    /* Настройки контейнера */
+    .container {
+        padding: 10px; /* Минимальные отступы */
+        gap: 10px; /* Уменьшенное расстояние между элементами */
+    }
+    
+    /* Настройки центрального блока */
+    .content {
+        gap: 10px; /* Уменьшенное расстояние между кнопками */
+    }
 }
